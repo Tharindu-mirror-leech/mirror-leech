@@ -6,13 +6,13 @@
 [![Docker Pulls](https://img.shields.io/badge/Docker-ff1709?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/harshhaareddy/mega-sdk-python)
 [![Channel](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/SparkXcloud)
 
-**SparkXcloud-Gdrive-MirrorBot** *is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.*
+**Tharindu-mirror-leech** *is a _multipurpose_ Telegram Bot writen in Python for mirroring files on the Internet to our beloved Google Drive.*
 
 # Features:
 
-## By [Sparkxcloud](https://github.com/Spark-X-Cloud)
+## By [Tharindu-mirror-leech](https://github.com/Tharindu-mirror-leech)
 -----
-### ➡️ Spark-x-cloud mirrorbot main features :-
+### ➡️ Tharindu-mirror-leech :-
 
 ***In each single file there is a major change from base code, it's almost totaly different. Here some of features and fixes that I remember.***
 ### 🥀 qBittorrent
