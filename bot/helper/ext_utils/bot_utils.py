@@ -123,11 +123,12 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             #msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
             msg += f"<code>{escape(str(download.name()))}</code>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
                 msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
                 msg += f"\n<b>💢 Pʀᴏᴄᴇssᴇᴅ:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 msg += f"\n<b>💫 Sᴘᴇᴇᴅ:</b> {download.speed()} | <b>💦 Eᴛᴀ:</b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
@@ -135,14 +136,14 @@ def get_readable_message():
                         msg += f"\n<b>💤 Sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
                 msg += f"\n<b>📯 Sᴘᴇᴇᴅ: </b>{download.upload_speed()}"
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
-                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
             msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
