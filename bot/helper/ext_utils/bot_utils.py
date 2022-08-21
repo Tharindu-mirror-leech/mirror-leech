@@ -20,16 +20,16 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "📤Upload..//"
-    STATUS_DOWNLOADING = "📥Download..//"
-    STATUS_CLONING = "♻️Clone..//"
+    STATUS_UPLOADING = "📂Upload...📤"
+    STATUS_DOWNLOADING = "📁Download...📥"
+    STATUS_CLONING = "🗳Clone...♻️"
     STATUS_WAITING = "Queue..//"
     STATUS_PAUSED = "Pause..//"
-    STATUS_ARCHIVING = "📚Archive..//"
-    STATUS_EXTRACTING = "📚Extract..//"
+    STATUS_ARCHIVING = "📚Archive...🔗"
+    STATUS_EXTRACTING = "📚Extract...🗃"
     STATUS_SPLITTING = "Split..//"
     STATUS_CHECKING = "CheckUp..//"
-    STATUS_SEEDING = "👀Seed..//"
+    STATUS_SEEDING = "👀Seed...💦"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -170,7 +170,7 @@ def get_readable_message():
                     up_speed += float(spd.split('M')[0]) * 1048576
         bmsg = f"<b>🖥️ Cᴘᴜ:</b> {cpu_percent()}% | <b>Fʀᴇᴇ:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
         bmsg += f"\n<b>🎮 Rᴀᴍ:</b> {virtual_memory().percent}% | <b>Uᴘᴛɪᴍᴇ:</b> {get_readable_time(time() - botStartTime)}"
-        bmsg += f"\n<b>DL:</b> {get_readable_file_size(dl_speed)}/s | <b>UL:</b> {get_readable_file_size(up_speed)}/s"
+        bmsg += f"\n<b>DL..🔽:</b> {get_readable_file_size(dl_speed)}/s | <b>UL..:🔼</b> {get_readable_file_size(up_speed)}/s"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
