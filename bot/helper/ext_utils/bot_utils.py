@@ -121,7 +121,7 @@ def get_readable_message():
             if PAGE_NO > pages and pages != 0:
                 globals()['COUNT'] -= STATUS_LIMIT
                 globals()['PAGE_NO'] -= 1
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             #msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
             msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
@@ -142,7 +142,7 @@ def get_readable_message():
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
+              msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
             msg += f"\nToken:<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
