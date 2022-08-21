@@ -207,7 +207,7 @@ function s_validate() {
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Tharindu-mirror-leech/mirror-leech"><i class="fab fa-github"></i></a>
         <a href="https://t.me/SparkXcloud"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -568,7 +568,7 @@ section span{
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Tharindu-mirror-leech/mirror-leech"><i class="fab fa-github"></i></a>
         <a href="https://t.me/SparkXcloud"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -704,7 +704,7 @@ def set_priority(hash_id):
 
 @app.route('/')
 def homepage():
-    return "<h1>See SparkXcloud-Gdrive-MirrorBot <a href='https://www.github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot'>@GitHub</a> By <a href='https://github.com/Spark-X-Cloud'>Anas</a></h1>"
+    return "<h1>See mirror-leech <a href='https://github.com/Tharindu-mirror-leech/mirror-leech'>@GitHub</a> By <a href='https://github.com/Tharindu-mirror-leech'>Anas</a></h1>"
 
 @app.errorhandler(NotFound404Error)
 def page_not_found(e):
