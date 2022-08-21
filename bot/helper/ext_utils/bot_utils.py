@@ -142,12 +142,12 @@ def get_readable_message():
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
-              msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
-            msg += f"\nToken:<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
-            msg += "\n\n"
+                msg += f"\nToken:<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
+                msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
         if len(msg) == 0:
