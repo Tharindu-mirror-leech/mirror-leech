@@ -142,11 +142,11 @@ def get_readable_message():
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
-                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
             msg += f"\nToken:<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━</b>"
+            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
@@ -176,7 +176,7 @@ def get_readable_message():
         bmsg = f"<b>🖥️ Cᴘᴜ:</b> {cpu_percent()}% | <b>Fʀᴇᴇ:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
         bmsg += f"\n<b>🎮 Rᴀᴍ:</b> {virtual_memory().percent}% | <b>Uᴘᴛɪᴍᴇ:</b> {get_readable_time(time() - botStartTime)}"
         bmsg += f"\n<b>DL..🔽:</b> {get_readable_file_size(dl_speed)}/s | <b>UL..:🔼</b> {get_readable_file_size(up_speed)}/s"
-        bmsg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+        bmsg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
