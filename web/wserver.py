@@ -206,7 +206,7 @@ function s_validate() {
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Tharindu-mirror-leech/mirror-leech"><i class="fab fa-github"></i></a>
         <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -567,7 +567,7 @@ section span{
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Tharindu-mirror-leech/mirror-leech"><i class="fab fa-github"></i></a>
         <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
