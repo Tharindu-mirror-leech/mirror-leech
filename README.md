@@ -289,8 +289,8 @@ NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 
 - *Clone this repo:*
 ```
-git clone https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot/
-cd mirrorbot
+git clone https://github.com/Tharindu-mirror-leech/mirror-leech/
+cd mirror-leech
 ```
 
 - *Install requirements
@@ -556,7 +556,7 @@ sudo docker-compose start
 ## ⬇️ Deploying on Heroku 
 
 ### ***Note : Use Only this method for Heroku deployments***
-<p><a href="https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot/tree/heroku"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
+<p><a href="https://github.com/Tharindu-mirror-leech"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
 
 -----
 ## ***Deploying on Heroku with heroku-cli and Goorm IDE***
