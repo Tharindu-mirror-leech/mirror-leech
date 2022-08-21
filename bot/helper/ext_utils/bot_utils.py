@@ -124,7 +124,7 @@ def get_readable_message():
             msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             #msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
-            msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
+            msg += f"\<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
             msg += f"<code>{escape(str(download.name()))}</code>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
                 msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
@@ -142,11 +142,11 @@ def get_readable_message():
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
-                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━</b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
-            msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+            msg += f"\n<b>Token:<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
