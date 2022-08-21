@@ -69,7 +69,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("🔥 Repo", "https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot")
+    buttons.buildbutton("🔥 Repo", "https://github.com/Tharindu-mirror-leech/mirror-leech")
     buttons.buildbutton("😎 Channel", "https://t.me/+R2czcPeMkUc1NDI1")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -80,7 +80,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>SparkXcloud-Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
+        sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>mirror-leech</b>.", context.bot, update, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting, Please wait!..👻👻", context.bot, update.message)
