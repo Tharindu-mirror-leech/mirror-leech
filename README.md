@@ -1,6 +1,6 @@
 ![]()
 
-# https://github.com/Tharindu-mirror-leech v2.0
+# Tharindu-mirror-leech v2.0
 [![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)]()
 [![GitHub watchers](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 [![Docker Pulls](https://img.shields.io/badge/Docker-ff1709?style=for-the-badge&logo=docker&logoColor=white)]()
