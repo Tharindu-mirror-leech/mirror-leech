@@ -22,14 +22,14 @@ PAGE_NO = 1
 class MirrorStatus:
     STATUS_UPLOADING = "📂Upload...📤"
     STATUS_DOWNLOADING = "📁Download...📥"
-    STATUS_CLONING = "🗳Clone...♻️"
-    STATUS_WAITING = "Queue..//"
-    STATUS_PAUSED = "Pause..//"
-    STATUS_ARCHIVING = "📚Archive...🔗"
-    STATUS_EXTRACTING = "📚Extract...🗃"
-    STATUS_SPLITTING = "Split..//"
-    STATUS_CHECKING = "CheckUp..//"
-    STATUS_SEEDING = "👀Seed...💦"
+    STATUS_CLONING = "🤶 Cloning..!. ♻️ "
+    STATUS_WAITING = "😡 𝚆𝚊𝚒𝚝𝚒𝚗𝚐...📝 "
+    STATUS_PAUSE = "🤷‍♀️ Paused...⏸ "
+    STATUS_ARCHIVING = "💝 Archiving...🔐 "
+    STATUS_EXTRACTING = "💔 Extracting...📂"
+    STATUS_SPLITTING = "💞 Splitting...✂️"
+    STATUS_CHECKING = "Cʜᴇᴄᴋɪɴɢᴜᴘ...📝"
+    STATUS_SEEDING = "Sᴇᴇᴅɪɴɢ...🌧"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -134,12 +134,14 @@ def get_readable_message():
                         msg += f"\n<b>💤 Sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}"
                     except:
                         pass
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
                 msg += f"\n<b>📯 Sᴘᴇᴇᴅ: </b>{download.upload_speed()}"
                 msg += f" | <b>👰 Uᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
                 msg += f"\n<b>👁️‍🗨️ Rᴀᴛɪᴏ: </b>{download.ratio()}"
                 msg += f" | <b>⏲️ Eᴛᴀ: </b>{download.seeding_time()}"
+                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             else:
                 msg += f"\n<b>📦 Sɪᴢᴇ: </b>{download.size()}"
             msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
