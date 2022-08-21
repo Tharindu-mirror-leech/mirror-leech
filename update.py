@@ -37,19 +37,19 @@ try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
 except:
-    UPSTREAM_REPO = "https://github.com/Spark-X-Cloud/SparkXcloud-Gdrive-MirrorBot"
+    UPSTREAM_REPO = "https://github.com/Tharindu-mirror-leech/mirror-leech"
 try:
     if len(UPSTREAM_BRANCH) == 0:
        raise TypeError
 except:
-    UPSTREAM_BRANCH = 'upstream'
+    UPSTREAM_BRANCH = 'h-code'
 
 if ospath.exists('.git'):
     srun(["rm", "-rf", ".git"])
 
 update = srun([f"git init -q \
-                 && git config --global user.email harshhaa03@gmail.com \
-                 && git config --global user.name harshhaareddy \
+                 && git config --global user.email tptabath81@gmail.com \
+                 && git config --global user.name tharindupraba \
                  && git add . \
                  && git commit -sm update -q \
                  && git remote add origin {UPSTREAM_REPO} \
