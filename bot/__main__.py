@@ -77,7 +77,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>SparkXcloud-Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting...", context.bot, update.message)
+    restart_message = sendMessage("Restarting...♾️", context.bot, update.message)
     if Interval:
         Interval[0].cancel()
         Interval.clear()
