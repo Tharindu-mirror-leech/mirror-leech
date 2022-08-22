@@ -127,7 +127,7 @@ def get_readable_message():
             msg += f"\n<b>{get_progress_bar_string(download)} {download.progress()}</b>"
             msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             #msg += f"🍻<code>{escape(str(download.name()))}</code>"
-            msg += f"📌Name:<code>{escape(str(download.name()))}</code>"
+            #msg += f"📌Name:<code>{escape(str(download.name()))}</code>"
             #msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
                # msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
@@ -136,7 +136,8 @@ def get_readable_message():
                 msg += f"\n<b>🚀 Sᴘᴇᴇᴅ:</b> {download.speed()} | <b>💦 Eᴛᴀ:</b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
-                        msg += f"\n<b>🍃 Sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}"
+                        msg += f"\n<b>🍃 Sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}        "
+                        msg += f"📌Name:<code>{escape(str(download.name()))}</code>"
                     except:
                         pass
                 
