@@ -340,7 +340,7 @@ class GoogleDriveHelper:
                     return "𝐲𝐨𝐮𝐫 𝐜𝐥𝐨𝐧𝐞 𝐡𝐚𝐬 𝐛𝐞𝐞𝐧 𝐬𝐭𝐨𝐩𝐩𝐞𝐝 𝐚𝐧𝐝 𝐜𝐥𝐨𝐧𝐞𝐝 𝐝𝐚𝐭𝐚 𝐡𝐚𝐬 𝐛𝐞𝐞𝐧 𝐝𝐞𝐥𝐞𝐭𝐞𝐝!", "𝐜𝐚𝐧𝐜𝐞𝐥𝐥𝐞𝐝"
                 msg += f'<b>🗂️ Fɪʟᴇɴᴀᴍᴇ: </b><code>{meta.get("name")}</code>'
                 msg += f'\n<b>📦 Sɪᴢᴇ: </b>{get_readable_file_size(self.transferred_size)}'
-                msg += '\n<b>⚙️ Tʏᴘᴇ: </b>Folder'
+                msg += '\n\n<b>⚙️ Tʏᴘᴇ: </b>Folder'
                 msg += f'\n<b>📚 Sᴜʙꜰᴏʟᴅᴇʀꜱ: </b>{self.__total_folders}'
                 msg += f'\n<b>📁 Fɪʟᴇꜱ: </b>{self.__total_files}'
                 buttons = ButtonMaker()
@@ -407,7 +407,7 @@ class GoogleDriveHelper:
     def __create_directory(self, directory_name, parent_id):
         file_metadata = {
             "name": directory_name,
-            "description": "👨‍🦱𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐔𝐬𝐢𝐧𝐠 𝐒𝐩𝐚𝐫𝐤𝐱𝐂𝐥𝐨𝐮𝐝-𝐆𝐝𝐫𝐢𝐯𝐞-𝐌𝐢𝐫𝐫𝐨𝐫𝐛𝐨𝐭",
+            "description": "👨‍🦱𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐔𝐬𝐢𝐧𝐠 𝐆𝐝𝐫𝐢𝐯𝐞-𝐌𝐢𝐫𝐫𝐨𝐫𝐛𝐨𝐭",
             "mimeType": self.__G_DRIVE_DIR_MIME_TYPE
         }
         if parent_id is not None:
@@ -662,7 +662,7 @@ class GoogleDriveHelper:
                 self.__gDrive_directory(meta)
                 msg += f'<b>🗂️ Fɪʟᴇɴᴀᴍᴇ: </b><code>{name}</code>'
                 msg += f'\n<b>📦 Sɪᴢᴇ: </b>{get_readable_file_size(self.__total_bytes)}'
-                msg += '\n<b>⚙️ Tʏᴘᴇ: </b>Folder'
+                msg += '\n\n<b>⚙️ Tʏᴘᴇ: </b>Folder'
                 msg += f'\n<b>📚 Sᴜʙꜰᴏʟᴅᴇʀꜱ: </b>{self.__total_folders}'
             else:
                 msg += f'<b>🗂️ Fɪʟᴇɴᴀᴍᴇ: </b><code>{name}</code>'
@@ -671,7 +671,7 @@ class GoogleDriveHelper:
                 self.__total_files += 1
                 self.__gDrive_file(meta)
                 msg += f'\n<b>📦 Sɪᴢᴇ: </b>{get_readable_file_size(self.__total_bytes)}'
-                msg += f'\n<b>⚙️ Tʏᴘᴇ: </b>{mime_type}'
+                msg += f'\n<b>├─⚙️ Tʏᴘᴇ: </b>{mime_type}'
             msg += f'\n<b>📁 Fɪʟᴇꜱ: </b>{self.__total_files}'
         except Exception as err:
             if isinstance(err, RetryError):
