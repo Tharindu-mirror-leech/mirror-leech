@@ -123,7 +123,7 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
             
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
-            msg += "\n"
+            #msg += "\n"
             msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
             msg += f"\n<b>┃  <a  href='{download.message.link}'>{download.status()}</a> </b>"
             msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
