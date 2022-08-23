@@ -8,12 +8,12 @@
 # All Right Reserved
 
 
-from speedtest import Speedtest
+from speed import speed
 from pyrogram import enums
 
-from tobrot import LOGGER
-from tobrot.bot_theme.themes import BotTheme
-from tobrot.helper_funcs.display_progress import humanbytes
+from bot import LOGGER
+#from tobrot.bot_theme.themes import BotTheme
+#from tobrot.helper_funcs.display_progress import humanbytes
 
 async def get_speed(self, message):
     imspd = await message.reply("`Running Speed Test...`")
