@@ -148,7 +148,7 @@ def get_readable_message():
                 msg += f" | <b>┃ ⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
             else:
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
-            msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>                          ┃"
+            msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b>"
             msg += "\n"
