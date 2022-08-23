@@ -175,7 +175,6 @@ def get_readable_message():
         bmsg += f"\n<b>🖥️ Cᴘᴜ➮ </b> {cpu_percent()}% | <b>📀Fʀᴇᴇ➮ </b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
         bmsg += f"\n<b>🎮 Rᴀᴍ➮ </b> {virtual_memory().percent}% | <b>🌋Uᴘᴛɪᴍᴇ➮ </b> {get_readable_time(time() - botStartTime)}"
         bmsg += f"\n<b>🔽DL➮ </b> {get_readable_file_size(dl_speed)}/s🔻 | <b>🔼UL➮ </b> {get_readable_file_size(up_speed)}/s🔺"
-        msg+= f"\n<b>hsjnzv<b>"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
