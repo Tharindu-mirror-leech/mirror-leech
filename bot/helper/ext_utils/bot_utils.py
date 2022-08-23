@@ -21,15 +21,15 @@ PAGE_NO = 1
 
 class MirrorStatus:
     STATUS_UPLOADING = "📂𝕌𝕡𝕝𝕠𝕒𝕕🔺🔺....."
-    STATUS_DOWNLOADING = "𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕🔻🔻....."
-    STATUS_CLONING = "🤶 Cloning..!. ♻️ "
-    STATUS_WAITING = "😡 𝚆𝚊𝚒𝚝𝚒𝚗𝚐...📝 "
-    STATUS_PAUSE = "🤷‍♀️ Paused...⏸ "
-    STATUS_ARCHIVING = "💝 Archiving...🔐 "
-    STATUS_EXTRACTING = "💔 Extracting...📂"
-    STATUS_SPLITTING = "💞 Splitting...✂️"
-    STATUS_CHECKING = "Cʜᴇᴄᴋɪɴɢᴜᴘ...📝"
-    STATUS_SEEDING = "Sᴇᴇᴅɪɴɢ...🌧"
+    STATUS_DOWNLOADING = "📂𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕🔻🔻....."
+    STATUS_CLONING = "🤶 ℂ𝕝𝕠𝕟𝕚𝕟𝕘..!. ♻️ "
+    STATUS_WAITING = "😡 𝕎𝕒𝕚𝕥𝕚𝕟𝕘...📝 "
+    STATUS_PAUSE = "🤷‍♀️ ℙ𝕦𝕤𝕙...⏸ "
+    STATUS_ARCHIVING = "💝 𝔸𝕣𝕔𝕙𝕚𝕧𝕚𝕟𝕘...🔐 "
+    STATUS_EXTRACTING = "💔 𝔼𝕩𝕥𝕣𝕒𝕔𝕥𝕚𝕟𝕘...📂"
+    STATUS_SPLITTING = "💞 𝕊𝕡𝕝𝕚𝕥𝕥𝕚𝕟𝕘...✂️"
+    STATUS_CHECKING = "ℂ𝕙𝕖𝕔𝕜𝕚𝕟𝕘𝕦𝕡...📝"
+    STATUS_SEEDING = "𝕊𝕖𝕖𝕕𝕚𝕟𝕘...🌧"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
