@@ -149,7 +149,7 @@ def get_readable_message():
             else:
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
             #msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n┃ ❌Token➽ <send>/{BotCommands.CancelMirror} {download.gid()}</send>"
+            msg += f"\n┃ ❌Token➽ /{BotCommands.CancelMirror}{download.gid()}
             #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b>"
             #msg += "\n"
