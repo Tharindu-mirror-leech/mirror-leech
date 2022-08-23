@@ -149,7 +149,7 @@ def get_readable_message():
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
             msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
-            msg += f"\n<b> ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛  </b>"
+            msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛  </b>"
             msg += "\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
