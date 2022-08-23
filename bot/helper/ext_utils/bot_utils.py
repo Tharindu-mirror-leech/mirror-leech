@@ -123,31 +123,35 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
             
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
-            msg += "\n"
-            msg += f"<b><a href='{download.message.link}'>{download.status()}</a> </b>"
-            msg += f"\n<b>{get_progress_bar_string(download)} {download.progress()}</b>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+            #msg += "\n"
+            msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
+            msg += f"\n<b>┃  <a  href='{download.message.link}'>{download.status()}</a> </b>"
+            msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
+            #msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ </b>"
+            msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
-                msg += f"\n<b>📡 Pʀᴏᴄᴇssᴇᴅ➽ </b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n<b>🚀 Sᴘᴇᴇᴅ➽ </b> {download.speed()} | <b> ⏳Eᴛᴀ➽ </b> {download.eta()}"
+                msg += f"\n<b>┃  📡 Pʀᴏᴄᴇssᴇᴅ➽ </b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                msg += f"\n<b>┃  🚀 Sᴘᴇᴇᴅ➽ </b> {download.speed()} | <b> ⏳Eᴛᴀ➽ </b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
-                        msg += f"\n<b>🍃 Sᴇᴇᴅᴇʀs➽ </b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs➽ </b> {download.leechers_num()}"
+                        msg += f"\n<b>┃  🍃 Sᴇᴇᴅᴇʀs➽ </b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs➽ </b> {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n📌Name➽ <code>{escape(str(download.name()))}</code>"
-                msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n┃ 📌Name➽ <code>{escape(str(download.name()))}</code>"
+                #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+                msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
-                msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
-                msg += f"\n<b>📯 𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
-                msg += f" | <b>👰 𝕌𝕡𝕝𝕠𝕒𝕕𝕖𝕕➽ </b>{download.uploaded_bytes()}"
-                msg += f"\n<b>👁️‍🗨️ ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
-                msg += f" | <b>⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
+                msg += f"\n<b>┃  📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
+                msg += f"\n<b>┃ 📯 𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
+                msg += f" | <b>┃ 👰 𝕌𝕡𝕝𝕠𝕒𝕕𝕖𝕕➽ </b>{download.uploaded_bytes()}"
+                msg += f"\n<b>┃ 👁️‍🗨️ ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
+                msg += f" | <b>┃ ⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
             else:
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
-            msg += f"\n❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
-            msg += "\n"
+            msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+            #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
+            msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b>"
+            #msg += "\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
         if len(msg) == 0:
@@ -182,6 +186,7 @@ def get_readable_message():
         #bmsg += f"\n<b>┗━━━━━━━━━━━•❅•°•❈•━━━━━━━━━━━┛</b>"
         #bmsg += f"\n<b>╰───────────────────────────╯</b>"
         bmsg += f"\n<b>╰────────────•❅•°•❈•───────────╯</b>"
+        bmsg += f"\n<b> 🍀⚡️𝔻𝕠𝕨𝕟𝕝𝕠𝕕𝕤👉 /status [𝚜𝚎𝚎 𝚊𝚕𝚕]</b>"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
