@@ -134,7 +134,7 @@ def get_readable_message():
                         msg += f"\n<b>🍃 Sᴇᴇᴅᴇʀs➽ </b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs➽ </b> {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n✒️Name➽ <code>{escape(str(download.name()))}</code>"
+                msg += f"\n📌Name➽ <code>{escape(str(download.name()))}</code>"
                 msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
