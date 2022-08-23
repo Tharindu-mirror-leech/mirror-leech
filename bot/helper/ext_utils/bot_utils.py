@@ -20,8 +20,8 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "📂𝕌𝕡𝕝𝕠𝕒𝕕🔺🔺....."
-    STATUS_DOWNLOADING = "📂𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕🔻🔻....."
+    STATUS_UPLOADING = "┃  📂𝕌𝕡𝕝𝕠𝕒𝕕🔺🔺....."
+    STATUS_DOWNLOADING = "┃  📂𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕🔻🔻....."
     STATUS_CLONING = "🤶 ℂ𝕝𝕠𝕟𝕚𝕟𝕘..!. ♻️ "
     STATUS_WAITING = "😡 𝕎𝕒𝕚𝕥𝕚𝕟𝕘...📝 "
     STATUS_PAUSE = "🤷‍♀️ ℙ𝕦𝕤𝕙...⏸ "
@@ -125,7 +125,7 @@ def get_readable_message():
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             msg += "\n"
             msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
-            msg += f"<b>┃<a href='{download.message.link}'>{download.status()}</a> </b>"
+            msg += f"<b><a href='{download.message.link}'>{download.status()}</a> </b>"
             msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
             #msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ </b>"
             msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
