@@ -20,8 +20,8 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "📂Upload🔺🔺....."
-    STATUS_DOWNLOADING = "📁Download🔻🔻....."
+    STATUS_UPLOADING = "📂𝕌𝕡𝕝𝕠𝕒𝕕🔺🔺....."
+    STATUS_DOWNLOADING = "𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕🔻🔻....."
     STATUS_CLONING = "🤶 Cloning..!. ♻️ "
     STATUS_WAITING = "😡 𝚆𝚊𝚒𝚝𝚒𝚗𝚐...📝 "
     STATUS_PAUSE = "🤷‍♀️ Paused...⏸ "
@@ -134,7 +134,7 @@ def get_readable_message():
                         msg += f"\n<b>🍃 Sᴇᴇᴅᴇʀs➽ </b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs➽ </b> {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n📌Name➽ <code>{escape(str(download.name()))}</code>"
+                msg += f"\n📌ℕ𝕒𝕞𝕖➽ <code>{escape(str(download.name()))}</code>"
                 msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>📦 Sɪᴢᴇ➽ </b>{download.size()}"
@@ -176,7 +176,7 @@ def get_readable_message():
         bmsg = f"\n<b>╭───────────────────────────╮</b>"
         bmsg = f"\n<b>╭────────────•❅•°•❈•───────────╮</b>"
         bmsg += f"\n<b>      🖥️ Cᴘᴜ➮ </b> {cpu_percent()}% ❖ <b>📀Fʀᴇᴇ➮ </b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
-        bmsg += f"\n<b>      🎮 <font color="#FF0000">Ram</font>➮ </b> {virtual_memory().percent}% ❖ <b>🌋Uᴘᴛɪᴍᴇ➮ </b> {get_readable_time(time() - botStartTime)}"
+        bmsg += f"\n<b>      🎮 Ram➮ </b> {virtual_memory().percent}% ❖ <b>🌋Uᴘᴛɪᴍᴇ➮ </b> {get_readable_time(time() - botStartTime)}"
         bmsg += f"\n<b>      🔽DL➮ </b> {get_readable_file_size(dl_speed)}/s🔻 ❖ <b>🔼UL➮ </b> {get_readable_file_size(up_speed)}/s🔺"
         #bmsg += f"\n<b>┗━━━━━━━━━━━•❅•°•❈•━━━━━━━━━━━┛</b>"
         #bmsg += f"\n<b>╰───────────────────────────╯</b>"
