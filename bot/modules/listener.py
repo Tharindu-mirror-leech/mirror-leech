@@ -223,7 +223,8 @@ class MirrorLeechListener:
             msg += f'\n<b>├>📁 Tᴏᴛᴀʟ ғɪʟᴇs➽ </b>{folders}'
             if typ != 0:
                 msg += f'\n<b>├>📛 Cᴏʀʀᴜᴘᴛᴇᴅ ғɪʟᴇs➽ </b>{typ}'
-            msg += f'\n<b>├>👨‍🦰➽ </b>{self.tag}\n'
+                msg += f'\n<b>├>👨‍🦰➽ </b>{self.tag}'
+            msg += f'\n<b>╰──────────•❅•°•❈•❅•°•❈•──────────╯</b>
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
@@ -245,7 +246,7 @@ class MirrorLeechListener:
             if typ == "Folder":
                 msg += f'\n<b>├>📚 Sᴜʙꜰᴏʟᴅᴇʀꜱ➽ </b>{folders}'
                 msg += f'\n<b>├>📁 Fɪʟᴇꜱ➽ </b>{files}'
-                msg += f"\n<b>├>👨‍🦰➽ </b>{self.tag} "
+            msg += f"\n<b>├>👨‍🦰➽ </b>{self.tag} "
             msg += f'\n<b>╰──────────•❅•°•❈•❅•°•❈•──────────╯</b>'
             buttons = ButtonMaker()
             buttons.buildbutton("☁️ Dʀɪᴠᴇ Lɪɴᴋ ☁️", link)
