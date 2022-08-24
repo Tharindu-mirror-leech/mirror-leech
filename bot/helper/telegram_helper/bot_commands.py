@@ -23,7 +23,7 @@ class _BotCommands:
         self.CloneCommand = f'clone{CMD_INDEX}'
         self.CountCommand = f'count{CMD_INDEX}'
         self.DeleteCommand = f'del{CMD_INDEX}'
-        self.CancelMirror=f'cancel_{CMD_INDEX}'
+        self.CancelMirror = f'cancel{CMD_INDEX}'
         self.CancelAllCommand = f'cancelall{CMD_INDEX}'
         self.ListCommand = f'list{CMD_INDEX}'
         self.SearchCommand = f'search{CMD_INDEX}'
@@ -53,4 +53,4 @@ class _BotCommands:
         self.SleepCommand = f'sleep{CMD_INDEX}'
        
 
-BotCommands = _BotCommands()
+BotCommands=_BotCommands()
