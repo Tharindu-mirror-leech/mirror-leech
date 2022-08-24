@@ -53,4 +53,4 @@ class _BotCommands:
         self.SleepCommand = f'sleep{CMD_INDEX}'
        
 
-BotCommands=_BotCommands()
+BotCommands = _BotCommands()
