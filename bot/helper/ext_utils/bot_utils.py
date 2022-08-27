@@ -139,7 +139,7 @@ def get_readable_message():
                         pass
                 msg += f"\n┃ 📌Name➽ <code>{escape(str(download.name()))}</code>"
                 #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
-                msg += f"\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+                msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>┃  📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
                 msg += f"\n<b>┃ 📯 𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
