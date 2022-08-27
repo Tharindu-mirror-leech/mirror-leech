@@ -125,19 +125,19 @@ def get_readable_message():
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             #msg += "\n"
             msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
-            msg += f"\n┃  <a  href='{download.message.link}'>{download.status()}</a> "
+            msg += f"\n<b>┃  <a  href='{download.message.link}'>{download.status()}</a></b>"
             msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
             #msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ </b>"
             msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
-                msg += f"\n┃  📡 ℙ𝕣𝕠𝕔𝕖𝕤𝕤𝕖𝕕➽ {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n┃  🚀 𝕊𝕡𝕖𝕖𝕕➽ {download.speed()} | ⏳𝔼𝕥𝕒➽ {download.eta()}"
+                msg += f"\n<b>┃  📡 ℙ𝕣𝕠𝕔𝕖𝕤𝕤𝕖𝕕➽</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                msg += f"\n<b>┃  🚀 𝕊𝕡𝕖𝕖𝕕➽</b> {download.speed()} | <b>⏳𝔼𝕥𝕒➽</b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
-                        msg += f"\n┃  🍃 𝕊𝕖𝕖𝕕𝕖𝕣𝕤➽ {download.seeders_num()} | 💬 𝕃𝕖𝕖𝕔𝕙𝕖𝕣𝕤➽  {download.leechers_num()}"
+                        msg += f"\n<b>┃  🍃 𝕊𝕖𝕖𝕕𝕖𝕣𝕤➽</b> {download.seeders_num()} | <b>💬 𝕃𝕖𝕖𝕔𝕙𝕖𝕣𝕤➽</b>  {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n┃ 📌ℕ𝕒𝕞𝕖➽ <code>{escape(str(download.name()))}</code>"
+                msg += f"\n<b>┃ 📌ℕ𝕒𝕞𝕖➽</b> <code>{escape(str(download.name()))}</code>"
                 #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
                 msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
@@ -147,8 +147,8 @@ def get_readable_message():
                 msg += f"\n<b>┃ 👁️‍🗨️ ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
                 msg += f" | <b>┃ ⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
             else:
-                msg += f"\n📦 𝕊𝕚𝕫𝕖➽ {download.size()}"
-            msg += f"\n┃ ❌𝕋𝕠𝕜𝕖𝕟➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽</b> {download.size()}"
+            msg += f"\n<b>┃ ❌𝕋𝕠𝕜𝕖𝕟➽ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             #msg += f"\n┃ ❌Token➽ /{[BotCommands.CancelMirror_download.gid()]}"
             #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b>"
