@@ -125,19 +125,19 @@ def get_readable_message():
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             #msg += "\n"
             msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
-            msg += f"\n<b>┃  <a  href='{download.message.link}'>{download.status()}</a> </b>"
+            msg += f"\n┃  <a  href='{download.message.link}'>{download.status()}</a> "
             msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
             #msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ </b>"
             msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
-                msg += f"\n<b>┃  📡 Pʀᴏᴄᴇssᴇᴅ➽ </b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n<b>┃  🚀 Sᴘᴇᴇᴅ➽ </b> {download.speed()} | <b> ⏳Eᴛᴀ➽ </b> {download.eta()}"
+                msg += f"\n┃  📡 ℙ𝕣𝕠𝕔𝕖𝕤𝕤𝕖𝕕➽ {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                msg += f"\n┃  🚀 𝕊𝕡𝕖𝕖𝕕➽ {download.speed()} | ⏳𝔼𝕥𝕒➽ {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
-                        msg += f"\n<b>┃  🍃 Sᴇᴇᴅᴇʀs➽ </b> {download.seeders_num()} | <b>💬 Lᴇᴇᴄʜᴇʀs➽ </b> {download.leechers_num()}"
+                        msg += f"\n┃  🍃 𝕊𝕖𝕖𝕕𝕖𝕣𝕤➽ {download.seeders_num()} | 💬 𝕃𝕖𝕖𝕔𝕙𝕖𝕣𝕤➽  {download.leechers_num()}"
                     except:
                         pass
-                msg += f"\n┃ 📌Name➽ <code>{escape(str(download.name()))}</code>"
+                msg += f"\n┃ 📌ℕ𝕒𝕞𝕖➽ <code>{escape(str(download.name()))}</code>"
                 #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
                 msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
