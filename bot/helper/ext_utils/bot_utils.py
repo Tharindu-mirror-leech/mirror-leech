@@ -139,7 +139,7 @@ def get_readable_message():
                         pass
                 msg += f"\n┃ 📌Name➽ <code>{escape(str(download.name()))}</code>"
                 #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
-                msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
+                msg += f"\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>┃  📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
                 msg += f"\n<b>┃ 📯 𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
@@ -147,8 +147,8 @@ def get_readable_message():
                 msg += f"\n<b>┃ 👁️‍🗨️ ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
                 msg += f" | <b>┃ ⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
             else:
-                msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
-            msg += f"\n┃ ❌Token➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n📦 𝕊𝕚𝕫𝕖➽ {download.size()}"
+            msg += f"\n┃ ❌𝕋𝕠𝕜𝕖𝕟➽ <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             #msg += f"\n┃ ❌Token➽ /{[BotCommands.CancelMirror_download.gid()]}"
             #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
             msg += f"\n<b>┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</b>"
