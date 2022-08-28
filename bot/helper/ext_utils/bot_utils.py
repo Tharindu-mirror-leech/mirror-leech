@@ -126,7 +126,7 @@ def get_readable_message():
             #msg += "\n"
             msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</b>"
             msg += f"\n<b>┃  <a  href='{download.message.link}'>{download.status()}</a></b>"
-            msg += f"\n<b>┃  {get_progress_bar_string(download)} {download.progress()}</b>"
+            msg += f"\n┃  {get_progress_bar_string(download)} {download.progress()}"
             #msg += f"\n<b>┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ </b>"
             msg += f"\n<b>┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</b>"
             if download.status() not in [MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_SEEDING]:
