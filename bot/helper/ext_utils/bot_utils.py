@@ -189,7 +189,7 @@ def get_readable_message():
         bmsg += f"\n<b>╰────────────•❅•°•❈•───────────╯</b>"
         bmsg += f"\n<b> 🍀⚡️𝔻𝕠𝕨𝕟𝕝𝕠𝕕𝕤👉 /status [𝚜𝚎𝚎 𝚊𝚕𝚕]</b>"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
-            msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
+            msg += f"\n<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
             buttons.sbutton("Previous", "status pre")
             buttons.sbutton("Next", "status nex")
