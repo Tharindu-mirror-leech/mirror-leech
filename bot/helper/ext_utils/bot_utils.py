@@ -191,8 +191,8 @@ def get_readable_message():
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"\n<b> 📖ℙ𝕒𝕘𝕖➽ </b> {PAGE_NO}/{pages} 💠 <b>📝𝕋𝕒𝕤𝕜𝕤➽</b> {tasks}\n"
             buttons = ButtonMaker()
-            buttons.sbutton("Previous", "status pre")
-            buttons.sbutton("Next", "status nex")
+            buttons.sbutton("◀️Previous", "status pre")
+            buttons.sbutton("Next▶️", "status nex")
             button = buttons.build_menu(2)
             return msg + bmsg, button
         return msg + bmsg, ""
