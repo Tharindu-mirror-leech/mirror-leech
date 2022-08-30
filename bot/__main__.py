@@ -42,18 +42,18 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'<b>🛠 𝙲ᴏᴍᴍɪᴛ ᴅᴀᴛᴇ :</b> {last_commit}\n\n'\
+    stats = f'<b>🛠 𝙲ᴏᴍᴍɪᴛ ᴅᴀᴛᴇ :</b> {last_commit}\n'\
             f'<b>💝 𝙾ɴʟɪɴᴇ ᴛɪᴍᴇ : </b> {currentTime}\n'\
-            f'<b>☠️ 𝙾s ᴜᴘᴛɪᴍᴇ :</b> {osUptime}\n\n'\
+            f'<b>☠️ 𝙾s ᴜᴘᴛɪᴍᴇ :</b> {osUptime}\n'\
             f'<b>📇 Tᴏᴛᴀʟ ᴅɪsᴋ sᴘᴀᴄᴇ :</b> {total}\n'\
-            f'<b>🗃 𝙳ɪsᴋ sᴘᴀᴄᴇ ᴜsᴇᴅ :</b> {used} | <b>💌 𝙳ɪsᴋ sᴘᴀᴄᴇ ғʀᴇᴇ :</b> {free}\n\n'\
+            f'<b>🗃 𝙳ɪsᴋ sᴘᴀᴄᴇ ᴜsᴇᴅ :</b> {used} | <b>💌 𝙳ɪsᴋ sᴘᴀᴄᴇ ғʀᴇᴇ :</b> {free}\n'\
             f'<b>☠️ 𝚄ᴘʟᴏᴀᴅ ᴅᴀᴛᴀ :</b> {sent}\n'\
-            f'<b>💃 𝙳ᴏᴡɴʟᴏᴀᴅ ᴅᴀᴛᴀ :</b> {recv}\n\n'\
+            f'<b>💃 𝙳ᴏᴡɴʟᴏᴀᴅ ᴅᴀᴛᴀ :</b> {recv}\n'\
             f'<b>🖥 𝙲ᴘᴜ ᴜsᴜᴀɢᴇ :</b> {cpuUsage}%\n'\
             f'<b>🧭 𝚁ᴀᴍ :</b> {mem_p}%\n'\
-            f'<b>👸 𝙳ɪsᴋ ᴜsᴇᴅ :</b> {disk}%\n\n'\
+            f'<b>👸 𝙳ɪsᴋ ᴜsᴇᴅ :</b> {disk}%\n'\
             f'<b>💽 𝙿ʜʏsɪᴄᴀʟ ᴄᴏʀᴇs :</b> {p_core}\n'\
-            f'<b>🍥 𝚃otal Cores :</b> {t_core}\n\n'\
+            f'<b>🍥 𝚃otal Cores :</b> {t_core}\n'\
             f'<b>✳ 𝚂ᴡᴀᴘ :</b> {swap_t} | <b>👸 𝙳ɪsᴋ :</b> {swap_p}%\n'\
             f'<b>☁ 𝚃ᴏᴛᴀʟ ᴏғ ᴍᴇᴏᴍᴏʀʏ :</b> {mem_t}\n'\
             f'<b>💃 𝙵ʀᴇᴇ ᴏғ ᴍᴇᴍᴏʀʏ :</b> {mem_a}\n'\
@@ -77,7 +77,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(f"Oops! not an Authorized user.\nPlease deploy your own <b>SparkXcloud-Gdrive-MirrorBot</b>.", context.bot, update, reply_markup)
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting...♻️", context.bot, update.message)
+    restart_message = sendMessage("😅ℝ𝕖𝕤𝕥𝕒𝕣𝕥𝕚𝕟𝕘...♻️", context.bot, update.message)
     if Interval:
         Interval[0].cancel()
         Interval.clear()
