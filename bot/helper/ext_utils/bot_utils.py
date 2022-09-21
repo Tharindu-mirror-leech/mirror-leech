@@ -134,7 +134,7 @@ def get_readable_message():
                 msg += f"\n<b>├[🚀]𝕊𝕡𝕖𝕖𝕕➽</b> {download.speed()} | <b>[⏳]𝔼𝕥𝕒➽</b> {download.eta()}"
                 if hasattr(download, 'seeders_num'):
                     try:
-                        msg += f"\n<b> ├[🍃] 𝕊𝕖𝕖𝕕𝕖𝕣𝕤➽</b> {download.seeders_num()} | <b>[💬] 𝕃𝕖𝕖𝕔𝕙𝕖𝕣𝕤➽</b>  {download.leechers_num()}"
+                        msg += f"\n<b>├[🍃] 𝕊𝕖𝕖𝕕𝕖𝕣𝕤➽</b> {download.seeders_num()} | <b>[💬] 𝕃𝕖𝕖𝕔𝕙𝕖𝕣𝕤➽</b>  {download.leechers_num()}"
                     except:
                         pass
                 msg += f"\n<b>╰[📌]ℕ𝕒𝕞𝕖➽</b> <code>{escape(str(download.name()))}</code>"
