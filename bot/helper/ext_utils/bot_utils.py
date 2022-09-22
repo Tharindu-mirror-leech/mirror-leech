@@ -141,11 +141,11 @@ def get_readable_message():
                 #msg += f"\n<b> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ </b>"
                 msg += f"\n<b>╭───────────────────────────╮</b>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
-                msg += f"\n<b>┃ 📦 𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
-                msg += f"\n<b>┃ 📯 𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
-                msg += f" | <b>┃ 👰 𝕌𝕡𝕝𝕠𝕒𝕕𝕖𝕕➽ </b>{download.uploaded_bytes()}"
-                msg += f"\n<b>┃ 👁️‍🗨️ ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
-                msg += f" | <b>┃ ⏳ 𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
+                msg += f"\n<b>├[📦]𝕊𝕚𝕫𝕖➽ </b>{download.size()}"
+                msg += f"\n<b>├[📯]𝕊𝕡𝕖𝕖𝕕➽ </b>{download.upload_speed()}"
+                msg += f" | <b>├[👰]𝕌𝕡𝕝𝕠𝕒𝕕𝕖𝕕➽ </b>{download.uploaded_bytes()}"
+                msg += f"\n<b>├[👁️‍🗨️]ℝ𝕒𝕥𝕚𝕠➽ </b>{download.ratio()}"
+                msg += f" | <b>├[⏳]𝔼𝕥𝕒➽ </b>{download.seeding_time()}"
             else:
                 msg += f"\n<b>📦 𝕊𝕚𝕫𝕖➽</b> {download.size()}"
             msg += f"\n<b>┃ ❌𝕋𝕠𝕜𝕖𝕟➽ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
